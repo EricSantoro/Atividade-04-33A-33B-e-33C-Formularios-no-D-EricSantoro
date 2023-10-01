@@ -13,6 +13,10 @@
 </head>
 
 <body>
+  {% if request.user.is_authenticated %}
+    <b>Bem-vindo, {{request.user.username}}</b> <br> 
+    <a href="/users/logout">Sair</a>
+  {% endif %}
   <h4> Nome: Eric Santoro Almeida gomes Fernandes</h4>
   <h1 style="display: flex; justify-content: center;"><b>Remnant, From the Ashes</b></h1>
 

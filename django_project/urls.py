@@ -17,13 +17,18 @@ from django.contrib import admin
 from django.urls import path
 
 from app_eric import views
-urlpatterns = [ path('',views.home, name='remnant'),
-    path('admin/', admin.site.urls),
-    path('motivos',views.create_motivos),   
-    path('motivos/update/<id>',views.update_motivos),
-    path('motivos/delete/<id>',views.delete_motivos),
-    path('sensações',views.create_sensações),   
-    path('sensações/update/<id>',views.update_sensações),
-    path('sensações/delete/<id>',views.delete_sensações)
+urlpatterns = [
+  path('users/login/', views.login_user, name="login"),
+  path('users/logout/', views.logout_user, name="logout"),
+  path('users', views.create_user),
+  # path('users/', include('django.contrib.auth.urls')),
+  path('',views.home, name='remnant'),
+  path('admin/', admin.site.urls),
+  path('motivos',views.create_motivos),   
+  path('motivos/update/<id>',views.update_motivos),
+  path('motivos/delete/<id>',views.delete_motivos),
+  path('sensações',views.create_sensações),   
+  path('sensações/update/<id>',views.update_sensações),
+  path('sensações/delete/<id>',views.delete_sensações)
 
 ]
