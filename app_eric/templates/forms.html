@@ -1,0 +1,25 @@
+<h1>{{ action }}  Motivo</h1>
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="title" value="{{ motivo.title }}">
+  </div>
+    <div>
+    <label>mecanica</label>
+    <input name="mecanica" value="{{ motivo.mecanica }}">
+  </div>
+    <div>
+    <label>concorda</label>
+    <input name="concorda" value="{{ motivo.concorda }}" >
+  </div>
+    <div>
+    <label>ja fez/jogou</label>
+    <input name="ja_jogou" value="{{ motivo.ja_jogou }}">
+  </div>
+  <input type="submit" value="registrar">
+</form>
+
+
+
+

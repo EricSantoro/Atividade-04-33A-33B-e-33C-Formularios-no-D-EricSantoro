@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  width: 100%;
+ background-image: url(https://image.api.playstation.com/vulcan/img/rnd/202010/1520/2G7FtAqWxKiJvUMESgyAIml5.png);
+  background-size: cover;
+  background-position: center;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+
+}
+h6{
+  margin-top: 2px;
+  width: 750px;
+  font-size: 5px;
+}
+.descrição{
+
+}
+.listas{
+  color: red;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;
+ }
+
+td:hover {background-color: hsla(216, 6%, 52%,0.6);
+}
+#titulo{
+  background-color: black;
+  color: white;
+}
+.imagem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

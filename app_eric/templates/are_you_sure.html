@@ -1,0 +1,5 @@
+tem certeza que deseja remover esse motivo "{{motivos.title}}"?
+<form method='POST'>
+  {% csrf_token %}
+  <input type='submit' name = 'confirm' value = 'sim'>
+  <input type = 'submit' value = 'não'>

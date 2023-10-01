@@ -1,0 +1,21 @@
+<h1>{{ action }}  sensação</h1>
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="title" value="{{ sensação.title }}">
+  </div>
+    <div>
+    <label>dificuldade</label>
+    <input name="dificuldade" value="{{ sensação.dificuldade }}">
+  </div>
+    <div>
+    <label>fez</label>
+  <input name="fez" value="{{ sensação.fez }}" >
+  </div>
+    <div>
+    <label>prazer</label>
+    <input name="prazer" value="{{ sensação.prazer }}">
+  </div>
+  <input type="submit" value="registrar">
+</form>

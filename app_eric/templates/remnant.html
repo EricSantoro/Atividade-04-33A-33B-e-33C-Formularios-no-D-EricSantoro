@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Eric Santoro Almeida Gomes Fernandes</title>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h4> Nome: Eric Santoro Almeida gomes Fernandes</h4>
+  <h1 style="display: flex; justify-content: center;"><b>Remnant, From the Ashes</b></h1>
+
+  <div class="descrição">
+    <p style="text-align: justify;">"<i>Remnant: From the Ashes</i>" é um jogo de ação e RPG ao estilo de Dark Souls,desenvolvido pela Gunfire Games. Ele se passa em um mundo pós-apocalíptico que foi tomado por uma entidade chamada Raiz. Os jogadores exploram os diversos mundos, batalhando contra diversos monstros e "bosses", com mecânicas diferentes, fazendo com que suas batalhas sejam sempre únicas e inovadoras. A jogabilidade inclui criação de armas, cooperação em equipe e personalização de personagens. A história é revelada através da exploração, com NPCs fornecendo informações sobre o mundo e sua ameaça. Com uma atmosfera sombria, narrativa envolvente e mecânicas de jogo versáteis, "<i>Remnant: From the Ashes</i>" oferece uma experiência única de exploração.</p>
+  </div>
+<div class="imagem">
+  
+  <img 
+src="{% static 'images/foto.principal.jpg' %}"
+    width="750px">
+<h6> Fonte:
+    https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore.epicgames.com%2Fpt-BR%2Fp%2Fremnant-from-the-ashes&psig=AOvVaw3D9vPZyab_2XrKZX5zG4Y4&ust=1692319301074000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPjqvd-64oADFQAAAAAdAAAAABAE
+  </h6>
+</div>
+  <div class="listas">
+    <div>
+      
+      <!--ul>
+        <li>Jogo de Cooperação multijogador para jogar com os amigos</li>
+        <li>Personalização do personagem e classes especiais para os diferentes estilos de jogo</li>
+        <li>Boss fights inovadoras</li>
+      </ul>-->
+      <h2><u>Top Sensações ao jogar Remnant:</u></h2>
+      <ul>
+        {% for sensações in Sensações %}
+        <li>{{sensações.title}}
+        <a href="/sensações/update/{{ sensações.id }}">Atualizar</a>
+        <a href="/sensações/delete/{{ sensações.id }}">Remover</a></li>
+        {% endfor %}
+        
+      </ul>
+      <a href="/sensações">Adicionar novas sensações</a>
+    </div>
+    <div>
+     
+      <!--ol>
+        <li>Conseguir vencer um boss difícil após uma longa luta</li>
+        <li>Lootear um item op</li>
+        <li>Conseguir fazer um "clutch" e salvar o amigo</li>
+      </ol> -->
+      <h2><u>Motivos para jogar Remnant:</u></h2>
+      <ol>
+        {% for motivo in motivos %}
+        <li>{{motivo.title}}
+        <a href="/motivos/update/{{ motivo.id }}">Atualizar</a>
+        <a href="/motivos/delete/{{ motivo.id }}">Remover</a></li>
+        {% endfor %}
+      </ol>
+      <a href="/motivos">Adicionar novos motivos</a>
+    </div>
+  </div>
+
+  <h2>Requisitos do sistema</h2>
+  <table border="1" class="tabela">
+    <tr id="titulo">
+      <th></th>
+      <th>Mínimo</th>
+      <th>Recomendado</th>
+    </tr>
+    <tr>
+      <th id="titulo">SO</th>
+      <td>Windows 7 / 8 / 10 64 bit</td>
+      <td>Windows 7 / 8 / 10 64 bit</td>
+    </tr>
+    <tr>
+      <th id="titulo">Processador</th>
+      <td>Intel Core i3-7350K (4.20 GHz) ou melhor</td>
+      <td>Intel Core i5-4590 (3.70 GHz) ou melhor</td>
+    </tr>
+    <tr>
+      <th id="titulo">Memória</th>
+      <td>8 GB de RAM</td>
+      <td>8 GB de RAM</td>
+    </tr>
+    <tr>
+      <th id="titulo">Placa De vídeo</th>
+      <td>AMD Radeon RX 470</td>
+      <td>Nvidia GeForce GTX 970</td>
+    </tr>
+    <tr>
+      <th id="titulo">DirectX</th>
+      <td>Versão 11</td>
+      <td>Versão 11</td>
+    </tr>
+  </table>
+
+  <h2>Explore Mais</h2>
+  <p>Para mais informações sobre o jogo, <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Clique Aqui</a>.</p>
+</body>
+
+</html>
