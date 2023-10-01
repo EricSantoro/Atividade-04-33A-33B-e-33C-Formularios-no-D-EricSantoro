@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from app_eric import views
 urlpatterns = [ path('',views.home, name='remnant'),
     path('admin/', admin.site.urls),
@@ -24,6 +25,5 @@ urlpatterns = [ path('',views.home, name='remnant'),
     path('sensações',views.create_sensações),   
     path('sensações/update/<id>',views.update_sensações),
     path('sensações/delete/<id>',views.delete_sensações)
-   
-    
+
 ]
